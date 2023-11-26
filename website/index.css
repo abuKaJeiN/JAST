@@ -1,0 +1,308 @@
+@font-face {
+font-family: 'Roboto Mono';
+src: url(../assets/fonts/RobotoMono-VariableFont_wght.ttf);
+}
+
+@font-face {
+font-family: 'Roboto';
+src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+font-family: "Mr.B Dull";
+src: url(../assets/fonts/MrBDull2.ttf);
+}
+
+* {
+    /* border: 1px #f00f solid; */
+    padding: 0.05px; /*jebać html*/
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto Mono', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+}
+
+body,html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    height: 6rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    background: #fff;
+    backdrop-filter: blur(10px);
+    box-shadow:  #0008 -2px 8px 8px;
+    z-index: 20;
+}
+
+nav > * {
+    height: 100%;
+}
+
+.navWrapper {
+    flex: 0 1 72em;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2em;
+}
+
+.navWrapper > * {
+    display: inline-block;
+}
+
+.navWrapper > a {
+    color: #0008;
+    display: flex;
+    place-items: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+    font-weight: 700;
+    /*text-shadow: #0008 4px 4px 8px;*/
+    transition: .5s;
+    position: relative;
+    margin: 0 1em;
+    /* max-width: 10em !important;
+    color: red !important;
+    white-space: nowrap;
+    text-overflow: ellipsis; */
+}
+
+.navWrapper > a::after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    bottom: calc(50% - .7rem);
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #0008;
+    transition: .5s;
+}
+
+.navWrapper > a:hover {
+    color: #000e;
+    transition: .5s;
+}
+
+.navWrapper > a:hover::after {
+    width: 100%;
+    transition: .5s;
+    background: #000e;
+    left: 0;
+}
+
+#vid {
+    width: 100%;
+    height: 42em;
+    background: none;
+    overflow: hidden;
+    isolation: isolate;
+    box-shadow:  #0008 0 8px 32px 8px;
+}
+
+#yt {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    position: relative;
+    top: -50%;
+}
+
+#player {
+    /*display: none;*/
+    position: relative;
+    top: -42em;
+    object-fit: cover;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    scale: 1.1;
+}
+
+#captions {
+    padding: 5%;
+    color: #fff;
+    position: relative;
+    top: 0;
+    z-index: 1;
+    width: 60%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    text-shadow: #0008 4px 4px 16px;
+    /*display: none;*/
+}
+
+#captions > * {
+    margin: 1rem;
+}
+
+#captions p {
+    max-width: 80%;
+}
+
+#captions h4 {
+    max-width: 100%;
+    font-size: 2rem;
+}
+
+#captions h3 {
+    /* transition: 1s ease-in-out; */
+    font-size: 6rem;
+    color: #fff;
+}
+
+/*#captions h3:hover {
+    transition: 1s ease-in-out;
+    scale: 1.05;
+}
+
+#vid:hover #player {
+    transition: 1s ease-in-out;
+    scale: 1;
+}*/
+
+button {
+    aspect-ratio: 4 / 1;
+    height: 4em;
+    border: none;
+    border-radius: 0;
+}
+
+#top-3 {
+    display: flex;
+    max-width: 128em;
+    justify-content: space-around;
+    padding: 4rem;
+    margin: 0 auto;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    flex-direction: row; /*change with smaller device to column or smth idfk*/
+}
+
+#top-3 > a {
+    display: inline-block;
+    flex: 0 0 30em;
+    margin: 1em .25em;
+    /*width: 30em;*/
+    aspect-ratio: 4/3;
+}
+
+#top-3 > a > * {
+    width: 100%;
+    height: 100%;
+}
+
+.font {
+    font-family: "Mr.B Dull";
+    display: inline-block;
+    user-select: none;
+}
+
+.icon {
+    display: inline-block;
+    aspect-ratio: 3 / 1;
+    text-align: center;
+}
+
+.icon > * {
+    font-family: "Mr.B Dull";
+    /*color: #161616;*/
+    height: 100%;
+    font-size: 6rem;
+    margin: auto;
+    display: inherit;
+    text-shadow: #0008 4px 4px 8px;
+    user-select: none;
+}
+
+.prod {
+    position: relative;
+    isolation: isolate;
+    transition: .5s ease-in-out;
+}
+
+.prod:hover {
+    scale: 1.02;
+    transition: .5s ease-in-out;
+}
+
+.prod h4 {
+    font-size: 2rem;
+    display: inline-block;
+    position: absolute;
+    margin: 1rem 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.pfore {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: no-repeat center;
+    /*background-size: contain;*/
+    z-index: 2;
+}
+
+.pmid {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: no-repeat center;
+    /*background-size: contain;*/
+    z-index: 1;
+}
+
+.pback {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: no-repeat center;
+    /*background-size: contain;*/
+    z-index: 0;
+}
+
+#about {
+    background: #222;
+    color: #fff;
+    padding-bottom: 4em;
+}
+
+.aboutWrapper {
+    display: flex;
+    align-items: center;
+    max-width: 96em;
+    margin: 0 auto;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.aboutWrapper > video{
+    width: 40%;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+}
+
+.aboutWrapper > p {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}

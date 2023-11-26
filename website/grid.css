@@ -1,0 +1,83 @@
+ * {
+    /*border: 1px #0000 solid;*/ /*idk why i need this line*/
+    padding: 0.05px; /*jebać html*/
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000;
+}
+
+/* main {
+    margin-top: 6rem;
+} */
+
+.productGrid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3em;
+}
+
+.productGrid > a {
+    display: inline-block;
+    width: 100%;
+    /*aspect-ratio: 3 / 4;*/
+    /*position: relative;*/
+    isolation: isolate;
+    /*box-shadow:  #0008 4px 4px 16px;
+    border-radius: .5em;*/
+}
+
+.productGrid > a > h4 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.productGrid > a > h3 {
+    font-size: 2rem;
+    margin: 0;
+    text-align: right;
+}
+
+.productGrid > a > img {
+    width: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    margin: 4em auto;
+    width: 64rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.breadCrumbs {
+    display: inline-block;
+    font-size: 1.5rem;
+    text-transform: lowercase;
+    color: #0004;
+    margin: 1em 0;
+}
+
+.sortButton {
+    margin: 1em 0;
+    background-color: #0002;
+}
+
+.sortButton:hover {
+    background-color: #0004;
+}
+
+.bigText {
+    font-size: 4rem;
+    margin: 0;
+    font-weight: 900;
+}
