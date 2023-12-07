@@ -18,6 +18,8 @@ get('/logout', 'views/logout.php');
 
 get('/userdashboard', 'views/userDashboard.php');
 
-get('/test', 'views/productView.php');
+get('/test/$id', 'views/productView.php');
+
+get('/test/$prodname/$id', 'views/productView.php');
 
 any('/404','views/404.php');

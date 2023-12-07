@@ -65,7 +65,7 @@ session_start();
                 // output data of each row
                 while($row = mysqli_fetch_assoc($result)) {
                     echo '
-                        <a href="">
+                        <a href="/test/'.$row["productName"].'/'.$row["id"].'">
                             <img'. $row["productStyleAttr"] . '>
                             <h4>'. $row["productName"] . '</h4>
                             <h3>'. $row["productPrice"] .'$</h3>
