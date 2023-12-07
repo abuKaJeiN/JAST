@@ -1,0 +1,22 @@
+body {
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    place-content: center;
+    text-align: center;
+    font-size: 300%;
+    margin: auto 0;
+
+    button {
+        display: inline-block;
+        width: max-content;
+        margin: 0 auto;
+    }
+}
+
+
+

@@ -12,7 +12,7 @@ get('/home', 'views/index.php');
 
 get('/product', 'views/grid.php');
 
-get('/login', 'views/login.php');
+any('/login', 'views/login.php');
 
 get('/logout', 'views/logout.php');
 
