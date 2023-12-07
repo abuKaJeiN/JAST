@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JAST - login / sign in</title>
-    <link href="./index.css" rel="stylesheet">
-    <link href="./login.css" rel="stylesheet">
+    <link href="/views/index.css" rel="stylesheet">
+    <link href="/views/login.css" rel="stylesheet">
     <link rel="icon" href="../assets/brand identity/favico.png">
     <?php
         function displayAlert($message){
@@ -14,7 +14,7 @@
             echo '</script>';
         }
         
-        function jsRedirect($url = 'http://localhost/Clothing%20Brand/website/'){
+        function jsRedirect($url = '/home'){
             echo '<script language="javascript">';
             echo 'window.location.replace("'.$url.'");';
             echo '</script>';

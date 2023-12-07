@@ -1,0 +1,57 @@
+*{
+    outline: red 1px solid !important;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+}
+
+.mainWrapper{
+    flex: 1 0 0;
+    width: 80%;
+    max-width: 2000px;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 auto;
+}
+
+#sidenav {
+    flex: 0 0 20%;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: auto;
+    padding: 2em 0;
+
+    button {
+        background: none;
+    }
+
+    button:hover {
+        background: #2221;
+    }
+
+    #logout {
+        background-color: #f00b;
+        margin-top: auto;
+    }
+    
+    #logout:hover {
+        background-color: #f00e;
+    }
+}
+
+#contentWrapper {
+    flex: 1 0;
+    padding: 2em 0;
+    overflow: hidden;
+
+    > * {
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+        display: none;
+    }
+}

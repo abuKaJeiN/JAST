@@ -65,14 +65,9 @@ nav > * {
     text-decoration: none;
     font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
     font-weight: 700;
-    /*text-shadow: #0008 4px 4px 8px;*/
     transition: .5s;
     position: relative;
     margin: 0 1em;
-    /* max-width: 10em !important;
-    color: red !important;
-    white-space: nowrap;
-    text-overflow: ellipsis; */
 }
 
 .navWrapper > a::after {

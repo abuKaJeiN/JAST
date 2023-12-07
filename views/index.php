@@ -7,8 +7,8 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JAST - Home</title>
-    <link href="./index.css" rel="stylesheet">
-    <link rel="icon" href="../assets/brand identity/favico.png">
+    <link href="/views/index.css" rel="stylesheet">
+    <link rel="icon" href="/assets/brand identity/favico.png">
 </head>
 <body>
     <!-- <nav>
@@ -23,7 +23,7 @@ session_start();
         </div>
     </nav> -->
     <?php 
-        include "./components/navbar.component.php";
+        include_once __DIR__ . "/components/navbar.component.php";
         echo createNavbar(); 
     ?>
     <div id="vid">       
@@ -32,7 +32,7 @@ session_start();
             <h3 class="font">JAST</h3>
             <h4>For Car Enthusiasts With Taste</h4>
             <p>We craft custom clothes to make you feel like you are one with your car and make them fit your style like its trurerly yours.</p>
-            <a href="./grid.php"><button>explore</button></a>
+            <a href="/product"><button>explore</button></a>
         </div>
         <video autoplay muted loop id="player">
             <source src="../assets/web.mp4" type="video/mp4" />
