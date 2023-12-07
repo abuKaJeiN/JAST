@@ -1,25 +1,28 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JAST - Product Page</title>
-    <link href="./index.css" rel="stylesheet">
-    <link href="./productView.css" rel="stylesheet">
+    <title>JAST - Dashboard</title>
+    <link href="/views/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="/views/productview.css">
     <link rel="icon" href="../assets/brand identity/favico.png">
+    <script>
+        function jsRedirect(url = "/") {
+            window.location.replace(url);
+        }
+    </script>
 </head>
+
 <body>
-    <nav>
-        <div class="navWrapper">
-            <a href="./index.php">home</a>
-            <a href="./grid.php">shop</a>
-            <div class="icon">
-                <h1>JAST</h1>
-            </div>
-            <a href="">faq</a>
-            <a href="./login.html">profile</a>
-        </div>
-    </nav>
+    <?php
+    include_once __DIR__ . "/components/navbar.component.php";
+    echo createNavbar();
+    ?>
     <!-- <div class="secondary nav">
         hoodies shoes tees custom
     </div> -->
@@ -44,16 +47,17 @@
             
         </div> -->
         <div id="sellingPoints">
-            
+
         </div>
         <div id="faq">
-            
+
         </div>
         <div id="recommended">
-            
+
         </div>
-        
+
     </main>
     <footer></footer>
 </body>
+
 </html>
