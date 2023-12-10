@@ -3,6 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,21 +12,11 @@ session_start();
     <link href="/views/grid.css" rel="stylesheet">
     <link rel="icon" href="../assets/brand identity/favico.png">
 </head>
+
 <body>
-    <!-- <nav>
-        <div class="navWrapper">
-            <a href="./index.php">home</a>
-            <a href="./grid.php">shop</a>
-            <div class="icon">
-                <h1>JAST</h1>
-            </div>
-            <a href="">faq</a>
-            <a href="./login.php">profile</a>
-        </div>
-    </nav> -->
-    <?php 
-        include_once __DIR__ . "/components/navbar.component.php";
-        echo createNavbar(); 
+    <?php
+    include_once __DIR__ . "/components/navbar.component.php";
+    echo createNavbar();
     ?>
     <main>
         <div class="wrapper">
@@ -40,40 +31,34 @@ session_start();
                     <h4>Cool hoodie title</h4>
                     <h3>80$</h3>
                 </a>-->
-                <?php 
+                <?php
 
-                #db connect
-                $servername = "localhost";
+                $servername = "localhost"; //obv to be changed
                 $username = "root";
                 $password = "";
                 $dbname = "JAST";
 
-                // Create connection
                 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-                // Check connection
                 if (!$conn) {
                     die("Connection failed: " . mysqli_connect_error());
                 }
-                // echo "Connected successfully";
 
                 $sql = "SELECT * FROM products";
                 $result = mysqli_query($conn, $sql);
-                // query
 
                 if (mysqli_num_rows($result) > 0) {
-                // output data of each row
-                while($row = mysqli_fetch_assoc($result)) {
-                    $urlProdName = str_replace(" ","_",$row['productName']);
-                    echo '
-                        <a href="/test/'.$urlProdName.'/'.$row["id"].'">
-                            <img'. $row["productStyleAttr"] . '>
-                            <h4>'. $row["productName"] . '</h4>
-                            <h3>'. $row["productPrice"] .'$</h3>
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $urlProdName = str_replace(" ", "_", $row['productName']);
+                        echo '
+                        <a href="/product/' . $urlProdName . '/' . $row["id"] . '">
+                            <img' . $row["productStyleAttr"] . '>
+                            <h4>' . $row["productName"] . '</h4>
+                            <h3>' . $row["productPrice"] . '$</h3>
                         </a>';
-                }
+                    }
                 } else {
-                echo "0 results";
+                    echo "0 results";
                 }
 
                 mysqli_close($conn);
@@ -82,4 +67,5 @@ session_start();
         </div>
     </main>
 </body>
+
 </html>

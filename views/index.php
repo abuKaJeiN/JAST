@@ -32,7 +32,7 @@ session_start();
             <h3 class="font">JAST</h3>
             <h4>For Car Enthusiasts With Taste</h4>
             <p>We craft custom clothes to make you feel like you are one with your car and make them fit your style like its trurerly yours.</p>
-            <a href="/product"><button>explore</button></a>
+            <a href="/shop"><button>explore</button></a>
         </div>
         <video autoplay muted loop id="player">
             <source src="../assets/web.mp4" type="video/mp4" />

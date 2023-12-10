@@ -11,7 +11,7 @@
     <nav>
         <div class="navWrapper">
             <a href="/">home</a>
-            <a href="/product">shop</a>
+            <a href="/shop">shop</a>
             <div class="icon">
                 <h1>JAST</h1>
             </div>

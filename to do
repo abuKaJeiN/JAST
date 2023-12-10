@@ -1,0 +1,23 @@
+images db
+
+product page finish up
+
+admin dashboard 
+    inventory management system
+    order management system
+
+sorting and filering
+
+user dashboard
+
+order funnel
+
+login system overhaul
+
+password reset system
+
+db structure overhaul
+    inventory info (in stock, pending, etc)
+    statistics (visits, coversion rates, transactions)
+
+code cleanup
