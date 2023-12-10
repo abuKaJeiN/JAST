@@ -64,8 +64,9 @@ session_start();
                 if (mysqli_num_rows($result) > 0) {
                 // output data of each row
                 while($row = mysqli_fetch_assoc($result)) {
+                    $urlProdName = str_replace(" ","_",$row['productName']);
                     echo '
-                        <a href="/test/'.$row["productName"].'/'.$row["id"].'">
+                        <a href="/test/'.$urlProdName.'/'.$row["id"].'">
                             <img'. $row["productStyleAttr"] . '>
                             <h4>'. $row["productName"] . '</h4>
                             <h3>'. $row["productPrice"] .'$</h3>

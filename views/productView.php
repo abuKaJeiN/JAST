@@ -83,13 +83,14 @@ session_start();
                 if (mysqli_num_rows($result) == 1) {
                     // output data of each row
                     while ($row = mysqli_fetch_assoc($result)) {
-                        if ((isset($prodname) && $prodname != $row['productName']) || !isset($prodname)) {
+                        $urlProdName = str_replace(" ","_",$row['productName']);
+                        if ((isset($prodname) && $prodname != $urlProdName) || !isset($prodname)) {
                             /* echo "<script>
                                 jsRedirect(/test);
                             </script>"; */
                             // /test/".$row['productName']."/".$id."
                             echo "trigger";
-                            header("location:/test/".$row['productName']."/".$id);
+                            header("location:/test/".$urlProdName."/".$id);
                         }
                         echo $row['productName'];
                     }
