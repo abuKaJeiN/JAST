@@ -1,6 +1,10 @@
-images db
 
 product page finish up
+
+product page administration
+    creating
+    editing
+    deleting
 
 admin dashboard 
     inventory management system

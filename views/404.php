@@ -10,7 +10,7 @@ session_start();
     <title>JAST - 404</title>
     <link href="/views/index.css" rel="stylesheet">
     <link href="/views/404.css" rel="stylesheet">
-    <link rel="icon" href="../assets/brand identity/favico.png">
+    <link rel="icon" href="/assets/brand identity/favico.png">
     <script>
         function jsRedirect(url = "/") {
             window.location.replace(url);

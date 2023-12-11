@@ -10,7 +10,7 @@ session_start();
     <title>JAST - Dashboard</title>
     <link href="/views/index.css" rel="stylesheet">
     <link rel="stylesheet" href="/views/userdashboard.css">
-    <link rel="icon" href="../assets/brand identity/favico.png">
+    <link rel="icon" href="/assets/brand identity/favico.png">
     <script>
         function jsRedirect(url="/") {
             window.location.replace(url);

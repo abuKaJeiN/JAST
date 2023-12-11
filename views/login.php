@@ -6,7 +6,7 @@
     <title>JAST - login / sign in</title>
     <link href="/views/index.css" rel="stylesheet">
     <link href="/views/login.css" rel="stylesheet">
-    <link rel="icon" href="../assets/brand identity/favico.png">
+    <link rel="icon" href="/assets/brand identity/favico.png">
     <?php
         function displayAlert($message){
             echo '<script language="javascript">';

@@ -10,7 +10,7 @@ session_start();
     <title>JAST - Home</title>
     <link href="/views/index.css" rel="stylesheet">
     <link href="/views/grid.css" rel="stylesheet">
-    <link rel="icon" href="../assets/brand identity/favico.png">
+    <link rel="icon" href="/assets/brand identity/favico.png">
 </head>
 
 <body>

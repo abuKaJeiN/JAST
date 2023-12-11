@@ -42,7 +42,7 @@ main {
         min-width: 48em;
         min-height: 100%;
 
-        .bigImg {
+        #bigImg {
             aspect-ratio: 1 / 1;
             margin: auto;
             height: 40em;
