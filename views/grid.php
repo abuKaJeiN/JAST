@@ -50,9 +50,16 @@ session_start();
                 if (mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
                         $urlProdName = str_replace(" ", "_", $row['productName']);
+                        $sqlThumbnail = "SELECT imagePath FROM productimages WHERE productId = " . $row["id"] . " LIMIT 1";
+                        $resultThumbnail = mysqli_query($conn, $sqlThumbnail);
+                        if (mysqli_num_rows($resultThumbnail)){
+                            $fetchedThumbnail = mysqli_fetch_assoc($resultThumbnail);
+                        } else {
+                            $fetchedThumbnail['imagePath'] = 'assets/missing_preview.png';
+                        }
                         echo '
                         <a href="/product/' . $urlProdName . '/' . $row["id"] . '">
-                            <img' . $row["productStyleAttr"] . '>
+                            <img src="/' . $fetchedThumbnail['imagePath'] . '">
                             <h4>' . $row["productName"] . '</h4>
                             <h3>' . $row["productPrice"] . '$</h3>
                         </a>';

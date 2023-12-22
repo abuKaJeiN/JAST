@@ -80,9 +80,8 @@ session_start();
                 <!-- <div id="bigImg" style="background: no-repeat 25%; background-size: contain; background-image: url('/');"></div> -->
             </div>
             <div id="action">
-                <h1><?php
-                    echo $id;
-
+                <h1 id="title">
+                    <?php
                     $sql = "SELECT * FROM products WHERE id = " . $id . "";
                     $result = mysqli_query($conn, $sql);
 
@@ -96,7 +95,16 @@ session_start();
                         }
                         echo $row['productName'];
                         }
-                    ?></h1>
+                    ?>
+                    </h1>
+                    <label for="size">Choose your size</label><br>
+                    <select name="size" id="size" required>
+                        <option value="size 1">size 1</option>
+                    </select><br>
+                    <label for="variation">Variation?</label><br>
+                    <select name="variation" id="variation" required>
+                        <option value="black">black</option>
+                    </select><br>
             </div>
         </div>
         <!-- <div id="testimonials/reviews">
