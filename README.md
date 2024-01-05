@@ -60,7 +60,6 @@ To get a copy of this project up and running on your local machine, follow these
 - **`views`:** Websites' views.
 - **`uploads`:** Image uploading system used to manage product thumbnail images and its previews.
 - **`assets`:** Fonts and website graphics.
-- **`api, assets, mocks`:** MydDevelopment, experimentation and ideas folders.
 
 ## Technologies Used
 
