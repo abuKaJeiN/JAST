@@ -31,7 +31,7 @@ To get a copy of this project up and running on your local machine, follow these
  
 2. Import the database:
 
-   - Use the provided SQL file (`JAST.sql`) to create the necessary tables and populate them with sample data.
+   - Use the provided SQL file `jast.sql` to create the necessary tables and populate them with sample data.
 
 3. Configure the database connection:
 
@@ -46,11 +46,17 @@ To get a copy of this project up and running on your local machine, follow these
 
 4. Run the project:
 
-   - Start Apache and click admin on the xampp panel to access the page. Reminder: it has to be in htdocs directory. \xampp\htdocs
+   - Start Apache and click admin on the xampp panel to access the page. Reminder: it has to be in htdocs directory. **`\xampp\htdocs`**
 
 5. Explore and Learn:
 
    - Explore the codebase, experiment with changes, and use this project as a learning resource to understand the basics of PHP web development.
+
+## Usage
+
+   - To add items to the shop you need to add them manually through phpMyAdmin in products table
+   - To add Images to a given product you need to go to **`http://localhost/fp`** and upload it. If throws an error check if you have **`uploads`** folder in **`htdocs`** directory
+   - To add user you can simply use register form at profile view.
 
 ## Project Structure
 
