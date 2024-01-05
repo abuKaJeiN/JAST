@@ -4,7 +4,7 @@
 
 
 <?php
-$target_dir = "uploads/";
+$target_dir = "uploads/"; //will be rewriten to be an api
 
 if (!file_exists( $target_dir . $_POST['productIndex'])) {
   mkdir( $target_dir . $_POST['productIndex']);
